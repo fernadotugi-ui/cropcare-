@@ -1,0 +1,622 @@
+import type { Route } from "./+types/_index";
+import { Link } from "react-router";
+import { 
+  TrendingUp, 
+  Shield, 
+  Sprout, 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  MapPin,
+  ChevronRight,
+  Star,
+  Check,
+  MessageCircle
+} from "lucide-react";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Crop Care Enterprises - Premium Fertilizers & Crop Solutions in Kenya" },
+    { name: "description", content: "Transform your farm with premium fertilizers and crop protection products. Trusted by Kenyan farmers for increased yield, improved crop health, and maximum profits." },
+  ];
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-emerald-950">
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/254720584127"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg shadow-green-500/30 transition-all duration-300 hover:scale-110 group"
+        aria-label="Contact on WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7 text-white" />
+        <span className="absolute right-full mr-3 px-3 py-1.5 bg-white rounded-lg text-sm font-medium text-gray-800 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          Chat with us
+        </span>
+      </a>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://assets.ls-assets.com/provider/istock/2252875231.jpg?w=1920"
+            alt="Lush green pepper field"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/95 via-emerald-950/80 to-emerald-950/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/50 via-transparent to-transparent" />
+        </div>
+
+        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 lg:pt-0">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full mb-8">
+              <Sprout className="w-4 h-4 text-amber-400" />
+              <span className="text-sm font-medium text-emerald-100">Kenya's Trusted Agricultural Partner</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
+              <span className="block">Grow Bigger.</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-emerald-200 to-amber-300">
+                Healthier.
+              </span>
+              <span className="block">More Profitable.</span>
+            </h1>
+
+            <p className="text-lg sm:text-xl text-emerald-100/80 mb-10 max-w-xl leading-relaxed">
+              Premium fertilizers and crop solutions trusted by Kenyan farmers. 
+              Scientifically formulated to increase yield and maximize your profits.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/products"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-emerald-950 font-bold rounded-xl shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 transition-all duration-300 transform hover:scale-105"
+              >
+                View Products
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/expert-advice"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl transition-all duration-300"
+              >
+                Get Expert Advice
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-emerald-800/30">
+              <div>
+                <p className="text-3xl sm:text-4xl font-bold text-white">10K+</p>
+                <p className="text-sm text-emerald-100/60 mt-1">Farmers Served</p>
+              </div>
+              <div>
+                <p className="text-3xl sm:text-4xl font-bold text-white">40%</p>
+                <p className="text-sm text-emerald-100/60 mt-1">Avg Yield Increase</p>
+              </div>
+              <div>
+                <p className="text-3xl sm:text-4xl font-bold text-white">15+</p>
+                <p className="text-sm text-emerald-100/60 mt-1">Years Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-emerald-400/50 rounded-full flex justify-center pt-2">
+            <div className="w-1.5 h-3 bg-emerald-400 rounded-full animate-pulse" />
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-950 to-emerald-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/5 via-transparent to-transparent" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="group relative p-8 bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border border-emerald-700/50 rounded-2xl hover:border-emerald-500/50 transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/30">
+                  <Shield className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Trusted by Farmers</h3>
+                <p className="text-emerald-100/70 leading-relaxed">
+                  Across Kenya, thousands of farmers rely on our products for consistent, reliable results season after season.
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border border-emerald-700/50 rounded-2xl hover:border-emerald-500/50 transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
+                  <TrendingUp className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">High Yield Results</h3>
+                <p className="text-emerald-100/70 leading-relaxed">
+                  Our scientifically formulated products deliver measurable increases in crop yield and quality.
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border border-emerald-700/50 rounded-2xl hover:border-emerald-500/50 transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                  <Sprout className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Scientifically Formulated</h3>
+                <p className="text-emerald-100/70 leading-relaxed">
+                  Developed by agricultural scientists for optimal plant nutrition and crop protection.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="py-16 lg:py-24 bg-emerald-900 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-600/50 to-transparent" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-amber-500/20 text-amber-400 text-sm font-semibold rounded-full mb-4">
+              Our Products
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Premium Crop Solutions
+            </h2>
+            <p className="text-emerald-100/70 text-lg max-w-2xl mx-auto">
+              Discover our range of scientifically formulated fertilizers and crop protection products designed for Kenyan conditions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="group relative bg-gradient-to-br from-emerald-800/80 to-emerald-900/80 backdrop-blur-sm border border-emerald-700/50 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-500">
+              <div className="aspect-square overflow-hidden bg-white">
+                <img
+                  src="https://assets.ls-assets.com/uploads/b0fe598a-fd50-453d-a27e-23c424bc646a/88c1a4a1-4245-4a9e-95e4-cca4cd17f7d5.jpg?w=600"
+                  alt="Masterline Tubers product label showing fertilizer information, benefits for tuber crops, and application rates with product bottle image"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent" />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-3">
+                  Fertilizer
+                </span>
+                <h3 className="text-xl font-bold text-white mb-2">Masterline Tubers</h3>
+                <p className="text-emerald-100/70 text-sm mb-4 leading-relaxed">
+                  Boosts tuber and bulb growth for potatoes, onions, carrots, and more. Get bigger, healthier harvests.
+                </p>
+                <Link
+                  to="/products/masterline-tubers"
+                  className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors"
+                >
+                  Learn More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-emerald-800/80 to-emerald-900/80 backdrop-blur-sm border border-emerald-700/50 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-500">
+              <div className="aspect-square overflow-hidden bg-white">
+                <img
+                  src="https://assets.ls-assets.com/uploads/b0fe598a-fd50-453d-a27e-23c424bc646a/19a25e1b-960e-4e74-b752-6193a85ccaa5.jpg?w=600"
+                  alt="Cropsil Liquid product label and information sheet showing herbicide specifications and usage instructions"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent" />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-xs font-semibold rounded-full mb-3">
+                  Herbicide
+                </span>
+                <h3 className="text-xl font-bold text-white mb-2">Cropsil Liquid</h3>
+                <p className="text-emerald-100/70 text-sm mb-4 leading-relaxed">
+                  Powerful herbicide for effective weed control. Protects your crops from competing vegetation.
+                </p>
+                <Link
+                  to="/products/cropsil-liquid"
+                  className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors"
+                >
+                  Learn More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-emerald-800/80 to-emerald-900/80 backdrop-blur-sm border border-emerald-700/50 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-500">
+              <div className="aspect-square overflow-hidden bg-white">
+                <img
+                  src="https://assets.ls-assets.com/uploads/b0fe598a-fd50-453d-a27e-23c424bc646a/b3dd8bc1-2d6a-4417-acb1-9f0833228345.jpg?w=600"
+                  alt="Masterline Potassium Nitrate fertilizer package design mockup showing front and back labels with product information and specifications"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent" />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-3">
+                  NPK Fertilizer
+                </span>
+                <h3 className="text-xl font-bold text-white mb-2">Masterline Potassium Nitrate</h3>
+                <p className="text-emerald-100/70 text-sm mb-4 leading-relaxed">
+                  Essential potassium for stronger stems, better fruit quality, and improved drought resistance.
+                </p>
+                <Link
+                  to="/products/masterline-potassium-nitrate"
+                  className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors"
+                >
+                  Learn More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-800/50 hover:bg-emerald-700/50 border border-emerald-600/50 text-white font-semibold rounded-xl transition-all duration-300"
+            >
+              View All Products
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-900 to-emerald-950 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <span className="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-400 text-sm font-semibold rounded-full mb-4">
+                Why Crop Care
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                The Difference <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">Real Results Make</span>
+              </h2>
+              <p className="text-emerald-100/70 text-lg mb-10 leading-relaxed">
+                We're not just selling products — we're partnering with farmers to maximize their success. Our solutions are backed by science and proven in Kenyan fields.
+              </p>
+
+              <div className="space-y-5">
+                {[
+                  { title: "Boosts Tuber & Bulb Growth", desc: "Specifically formulated for root crops and tubers" },
+                  { title: "Improves Crop Quality", desc: "Get uniform, marketable produce that commands better prices" },
+                  { title: "Enhances Nutrient Absorption", desc: "Your crops make the most of every nutrient in the soil" },
+                  { title: "Protects Against Diseases", desc: "Advanced formulations that shield crops from common threats" },
+                  { title: "Increases Yield & Profits", desc: "Measurable results that translate to more money in your pocket" },
+                ].map((item, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center mt-0.5">
+                      <Check className="w-4 h-4 text-emerald-950" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">{item.title}</h4>
+                      <p className="text-emerald-100/60 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                to="/why-choose-us"
+                className="inline-flex items-center gap-2 mt-10 text-amber-400 font-semibold hover:text-amber-300 transition-colors"
+              >
+                Learn More About Our Benefits
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-amber-500/20 rounded-3xl blur-xl" />
+              <div className="relative rounded-2xl overflow-hidden border-2 border-emerald-700/50">
+                <img
+                  src="https://assets.ls-assets.com/provider/istock/1329309807.jpg?w=800"
+                  alt="Farmer applying fertilizer to crops"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 to-transparent" />
+              </div>
+              <div className="absolute -bottom-6 -left-6 p-6 bg-emerald-800/90 backdrop-blur-md border border-emerald-600/50 rounded-xl shadow-xl">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center">
+                    <TrendingUp className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold text-white">40%</p>
+                    <p className="text-sm text-emerald-100/70">Average Yield Increase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16 lg:py-24 bg-emerald-950 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-600/50 to-transparent" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-amber-500/20 text-amber-400 text-sm font-semibold rounded-full mb-4">
+              Simple Process
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              How It Works
+            </h2>
+            <p className="text-emerald-100/70 text-lg max-w-2xl mx-auto">
+              Getting started is easy. Three simple steps to transform your farm's potential.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 relative">
+            <div className="hidden md:block absolute top-20 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-emerald-600 via-amber-500 to-emerald-600" />
+
+            <div className="relative text-center">
+              <div className="relative inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl shadow-lg shadow-emerald-500/30 mb-6">
+                <span className="text-2xl lg:text-3xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Choose Your Product</h3>
+              <p className="text-emerald-100/70 leading-relaxed max-w-xs mx-auto">
+                Browse our premium selection of fertilizers and crop protection products designed for your specific needs.
+              </p>
+            </div>
+
+            <div className="relative text-center">
+              <div className="relative inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl shadow-lg shadow-amber-500/30 mb-6">
+                <span className="text-2xl lg:text-3xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Apply as Directed</h3>
+              <p className="text-emerald-100/70 leading-relaxed max-w-xs mx-auto">
+                Follow our simple application guidelines. Our expert team is always available to provide guidance and support.
+              </p>
+            </div>
+
+            <div className="relative text-center">
+              <div className="relative inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl shadow-lg shadow-emerald-500/30 mb-6">
+                <span className="text-2xl lg:text-3xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Watch Crops Thrive</h3>
+              <p className="text-emerald-100/70 leading-relaxed max-w-xs mx-auto">
+                Experience the transformation. Healthier plants, bigger harvests, and increased profits season after season.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <Link
+              to="/how-it-works"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-emerald-950 font-bold rounded-xl shadow-lg shadow-amber-500/30 transition-all duration-300"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-950 to-emerald-900 relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-amber-500/20 rounded-3xl blur-xl" />
+              <div className="relative rounded-2xl overflow-hidden border-2 border-emerald-700/50">
+                <img
+                  src="https://assets.ls-assets.com/provider/istock/2161353596.jpg?w=800"
+                  alt="Agricultural cargo train - delivery of farm supplies"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 to-transparent" />
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <span className="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-400 text-sm font-semibold rounded-full mb-4">
+                About Us
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Rooted in Kenya, <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">Growing with Farmers</span>
+              </h2>
+              <p className="text-emerald-100/70 text-lg mb-6 leading-relaxed">
+                Crop Care Enterprises is a Kenyan-based agricultural company dedicated to empowering farmers across the nation. We understand the challenges Kenyan farmers face, and we've built our business around solving them.
+              </p>
+              <p className="text-emerald-100/70 text-lg mb-8 leading-relaxed">
+                Our team combines deep agricultural expertise with a genuine passion for farmer success. We don't just sell products — we partner with you to ensure your farm reaches its full potential.
+              </p>
+
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {[
+                  { label: "Farmers First", icon: Sprout },
+                  { label: "Quality Assured", icon: Shield },
+                  { label: "Expert Support", icon: Star },
+                  { label: "Proven Results", icon: TrendingUp },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3 p-4 bg-emerald-800/30 rounded-xl border border-emerald-700/30">
+                    <item.icon className="w-5 h-5 text-amber-400" />
+                    <span className="text-white font-medium">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors"
+              >
+                Learn More About Us
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-emerald-800 via-emerald-700 to-emerald-800 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)' }} />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Farm?
+          </h2>
+          <p className="text-emerald-100/80 text-lg mb-10 max-w-2xl mx-auto">
+            Join thousands of Kenyan farmers who have already discovered the Crop Care difference. Your best harvest starts here.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/order"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-emerald-950 font-bold rounded-xl shadow-lg shadow-amber-500/30 transition-all duration-300 transform hover:scale-105"
+            >
+              Order Now
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl transition-all duration-300"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 lg:py-24 bg-emerald-950 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-600/50 to-transparent" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <span className="inline-block px-4 py-1.5 bg-amber-500/20 text-amber-400 text-sm font-semibold rounded-full mb-4">
+                Get In Touch
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Let's Talk About Your Farm
+              </h2>
+              <p className="text-emerald-100/70 text-lg mb-10 leading-relaxed">
+                Have questions? Need expert advice on which products are right for your crops? Our team of agricultural specialists is here to help.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-emerald-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold mb-1">Mobile</p>
+                    <a href="tel:+254720584127" className="text-emerald-100/70 hover:text-amber-400 transition-colors">
+                      0720 584 127
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-emerald-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold mb-1">Landline (Accounts)</p>
+                    <a href="tel:+254113896062" className="text-emerald-100/70 hover:text-amber-400 transition-colors">
+                      011 389 6062
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-emerald-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold mb-1">Email</p>
+                    <a href="mailto:info@cropcare.co.ke" className="text-emerald-100/70 hover:text-amber-400 transition-colors">
+                      info@cropcare.co.ke
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-emerald-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold mb-1">Location</p>
+                    <p className="text-emerald-100/70">
+                      Nairobi, Kenya
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <Link
+                to="/expert-advice"
+                className="inline-flex items-center gap-2 mt-10 text-amber-400 font-semibold hover:text-amber-300 transition-colors"
+              >
+                Speak with an Expert
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border border-emerald-700/50 rounded-2xl p-8">
+              <h3 className="text-xl font-bold text-white mb-6">Send Us a Message</h3>
+              <form className="space-y-5">
+                <div>
+                  <label className="block text-sm font-medium text-emerald-100/80 mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-emerald-900/50 border border-emerald-700/50 rounded-xl text-white placeholder-emerald-100/40 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+                    placeholder="John Kamau"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-emerald-100/80 mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    className="w-full px-4 py-3 bg-emerald-900/50 border border-emerald-700/50 rounded-xl text-white placeholder-emerald-100/40 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+                    placeholder="0720 584 127"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-emerald-100/80 mb-2">Message</label>
+                  <textarea
+                    rows={4}
+                    className="w-full px-4 py-3 bg-emerald-900/50 border border-emerald-700/50 rounded-xl text-white placeholder-emerald-100/40 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all resize-none"
+                    placeholder="Tell us about your farm and what you need help with..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-emerald-950 font-bold rounded-xl shadow-lg shadow-amber-500/30 transition-all duration-300 transform hover:scale-[1.02]"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+
+Reset Chat
