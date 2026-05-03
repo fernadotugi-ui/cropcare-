@@ -1,0 +1,28 @@
+// This part goes inside the getProductInfo() function in your HTML file
+response = `
+    <div class="space-y-4">
+        <h3 class="text-emerald-400 font-bold text-lg border-b border-white/10 pb-2">${p.name}</h3>
+        
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-1">
+                <p class="text-sm"><strong>Composition:</strong> ${p.info}</p>
+                <p class="text-sm mt-2"><strong>Target Crops:</strong> ${p.usage}</p>
+                
+                <div class="mt-4 bg-emerald-500/10 p-3 rounded-lg border border-emerald-500/20">
+                    <p class="text-xs font-bold text-emerald-500 uppercase">Application Rate</p>
+                    <p class="text-sm font-semibold">${p.rate}</p>
+                </div>
+                
+                <p class="text-sm mt-3 text-gray-300"><strong>Key Benefit:</strong> ${p.benefits}</p>
+            </div>
+
+            <!-- Image Section -->
+            <div class="shrink-0">
+                <p class="text-[10px] uppercase text-gray-500 mb-2 font-bold tracking-widest text-center">Reference Label</p>
+                <img src="${p.image}" 
+                     alt="${p.name}" 
+                     class="w-48 h-64 object-cover rounded-xl border-2 border-emerald-500/30 shadow-2xl mx-auto"
+                     onerror="this.src='https://via.placeholder.com/200x260?text=Upload+tuber.jpg+to+GitHub'">
+            </div>
+        </div>
+    </div>`;
